@@ -46,89 +46,13 @@ class Footer extends React.Component<FooterProps, State> implements FooterView {
       <div className='footer__wrapper'>
         <div className='footer__inner-wrapper'>
           <div className='footer__container'>
-           <div className="footer__links">
-
-              <div className="asd">
-
-                    <Link
-
-                        to={`${localizationCode && `/${localizationCode}`}/app`}
-
-                        className='footer__links__link'>
-
-                        App
-
-                    </Link>
-
-                     <Link
-
-                        to={`${localizationCode && `/${localizationCode}`}/experience/overview`}
-
-                        className='footer__links__link'>
-
-                        Experience
-
-                    </Link>
-
-                         <a
-
-                        className='footer__links__link'
-
-                        href="https://go-help.cityrow.com/en/"
-
-                        target='_blank'
-
-                        rel='noopener noreferrer'
-
-                      >
-
-                       Help
-
-                    </a>
-
-              </div>
-
-              <div className="asd">
-
-                      <a
-
-                        className='footer__links__link'
-
-                        href="mailto:go@cityrow.com?subject=Inquiry about CITYROW GO"
-
-                        target='_blank'
-
-                        rel='noopener noreferrer'
-
-                      >
-
-                        Contact Us
-
-                    </a>
-
-                     <Link
-
-                        to={`${localizationCode && `/${localizationCode}`}/privacy-policy`}
-
-                        className='footer__links__link'>
-
-                        Privacy Policy
-
-                    </Link>
-
-                     <Link
-
-                        to={`${localizationCode && `/${localizationCode}`}/terms-of-service`}
-
-                        className='footer__links__link'>
-
-                        Terms of Service
-
-                    </Link>
-
-              </div>
-
-            </div>
+            <StaticQuery query={query}>
+              {(data) => {
+                const models = data.allBuilderModels;
+                const footer = models.navigationOptions[0].data;
+                return <Navigation localizationCode={localizationCode} options={footer.options} />;
+              }}
+            </StaticQuery>
           </div>
 
           <div className='footer__container'>
