@@ -1,0 +1,14 @@
+    version: '3.8'
+    services:
+      gatsby:
+        build: .
+        ports:
+          - "8000:8000"
+        volumes:
+          - ./:/
+          - gatsby_node_mods:/node_modules
+        env_file:
+          - .env
+       
+    volumes:
+      gatsby_node_mods:
