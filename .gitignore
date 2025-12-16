@@ -13,8 +13,8 @@
 /coverage
 
 # production
-build/
-public/
+app/build/
+app/public/
 app/.cache/**
 
 # misc
