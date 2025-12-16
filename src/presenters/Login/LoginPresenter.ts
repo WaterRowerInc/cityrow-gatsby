@@ -1,7 +1,7 @@
 import { GetLocalizationCode } from "../../core/useCases/GetLocalizationCode/GetLocalizationCode";
 import { LogIn } from "../../core/useCases/LogIn/LogIn";
 import { TrackAnalyticsPageView } from "../../core/useCases/TrackAnalytics/PageView/TrackAnalyticsPageView";
-import { IsAppTrialUser } from "../../core/useCases/IsAppTrialUser/IsAppTrialUser";
+import { IsAppTrialUser } from "./../../core/useCases/IsAppTrialUser/IsAppTrialUser";
 
 export interface LoginView {
   showLoader();

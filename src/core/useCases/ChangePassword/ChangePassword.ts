@@ -2,7 +2,7 @@ import { AuthService } from "../../domain/auth/AuthService";
 import { PasswordsDontMatchError } from "../../domain/auth/PasswordsDontMatchError";
 import { NotExpectedError } from "../../domain/orders/NotExpectedError";
 import { UserNotLoggedInError } from "../../domain/user/UserNotLoggedInError";
-import { GetUser } from "../GetUser/GetUser";
+import { GetUser } from "./../GetUser/GetUser";
 
 export class ChangePassword {
   private readonly authService: AuthService;

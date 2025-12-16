@@ -50,10 +50,26 @@ export const commonPageQuery = graphql`
     allBuilderModels {
       # if the limit is omitted it will only return the first 20 pages.
       landingPage(options: { cachebust: true }, limit: 1000) {
-        content
+        data {
+          html
+          css
+          url
+          jsCode
+          cssCode
+          inputs
+          httpRequests
+          blocks
+          customFonts
+          state
+          title
+          description
+          analyticsPageTitle
+        }
       }
       zoneModel {
-        content
+        data {
+          zone
+        }
       }
     }
   }

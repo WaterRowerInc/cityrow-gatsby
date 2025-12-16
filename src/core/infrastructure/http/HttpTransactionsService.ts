@@ -1,5 +1,5 @@
-import { TransactionRecord } from "../../domain/subscriptions/TransactionRecord";
-import { TransactionsService } from "../../domain/subscriptions/TransactionsServices";
+import { TransactionRecord } from "./../../domain/subscriptions/TransactionRecord";
+import { TransactionsService } from "./../../domain/subscriptions/TransactionsServices";
 import { HttpClient } from "./HttpClient";
 
 export class HttpTransactionsService implements TransactionsService {

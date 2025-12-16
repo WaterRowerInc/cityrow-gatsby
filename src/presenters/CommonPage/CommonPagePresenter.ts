@@ -29,10 +29,13 @@ export class CommonPagePresenter {
     }
   };
 
-  private _getContentFromDataAndPath = (data, path: string) =>
-    data?.allBuilderModels.landingPage?.find((page) => {
-      const url = page?.content.data.url;
-      const targetZones = page?.content.query.find((query) => query?.property === "zone")?.value;
+  private _getContentFromDataAndPath = (data, path: string) => {
+    const theData = data?.allBuilderModels.landingPage?.find((page) => {
+      const url = page?.data.url;
+      const targetZones = ["us"];
       return targetZones?.find((zone) => path.toLowerCase() === `/en-${zone}${url}`.toLowerCase());
-    })?.content;
+    });
+
+    return {...theData?.data, data: theData?.data};
+  };
 }
