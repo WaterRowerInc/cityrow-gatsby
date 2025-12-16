@@ -10,6 +10,7 @@ import { FooterPresenter, FooterView } from "../../presenters/FooterPresenter";
 import Country from "../../core/domain/localization/Country";
 import { DropdownOptionType } from "../../components/Form/DropdownField/DropdownOptionType";
 import { User } from "../../core/domain/user/User";
+import { Link } from "gatsby";
 
 class Footer extends React.Component<FooterProps, State> implements FooterView {
   state: State = { localizationCode: "", countryList: [], currentCountry: "", user: null };
