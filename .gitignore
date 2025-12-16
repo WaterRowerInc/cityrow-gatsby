@@ -13,9 +13,9 @@
 /coverage
 
 # production
-app/build/
-app/public/
-app/.cache/**
+build/
+public/
+.cache/**
 
 # misc
 .DS_Store
