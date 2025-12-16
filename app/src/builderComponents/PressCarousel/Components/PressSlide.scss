@@ -1,0 +1,29 @@
+@import '../../../assets/stylesheets/variables_/palette';
+@import '../../../assets/stylesheets/mixins/responsive';
+
+.pressSlide__ {
+  &container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &comment {
+    font-family: 'GothamBook', serif;
+    font-size: 22px;
+    line-height: 28px;
+    font-style: normal;
+    font-weight: normal;
+    text-align: center;
+    color: $white;
+    padding: 0 283px;
+
+    @include on-medium-device {
+      padding: 0 130px;
+    }
+
+    @include on-mobile {
+      padding: 0 31px;
+    }
+  }
+}

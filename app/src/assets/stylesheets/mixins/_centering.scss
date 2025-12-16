@@ -1,0 +1,47 @@
+@mixin v-center-child-with-ghost-element($child-selector: '.content', $height: 100%) {
+  &:before {
+    content: '';
+    height: $height;
+    display: inline-block;
+    vertical-align: middle;
+  }
+
+  #{$child-selector} {
+    display: inline-block;
+    vertical-align: middle;
+  }
+}
+
+@mixin vh-center-child-with-ghost-element($child-selector: '.content', $height: 100%) {
+  @include v-center-child-with-ghost-element($child-selector, $height);
+  text-align: center;
+
+  #{$child-selector} {
+    text-align: left;
+  }
+}
+
+@mixin absolute-horizontal-center-block {
+  @include fullwidth-position;
+
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@mixin absolute-vertical-center { // IE9+
+  top: 50%;
+  transform: translateY(-50%);
+  transform-style: preserve-3d;
+}
+
+@mixin absolutely-centered-block { // IE9+
+  @include absolute-vertical-center;
+  @include absolute-horizontal-center-block;
+  position: absolute;
+}
+
+@mixin block-horizontal-center {
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+}

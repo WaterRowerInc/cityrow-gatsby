@@ -1,0 +1,26 @@
+@import "../../../../assets/stylesheets/variables";
+@import "../../../../assets/stylesheets/mixins";
+
+.carousel-image-description-arrow__ {
+  position: absolute;
+  top: 50%;
+  width: 32px;
+  height: 32px;
+  background-repeat: no-repeat;
+  background-size: contain;
+  cursor: pointer;
+  z-index: 1;
+  @include on-medium-device {
+    display: none;
+  }
+
+  &--left {
+    left: 104px;
+    background-image: url("../../../../assets/images/leftBlackArrowSlick.png");
+  }
+
+  &--right {
+    right: 104px;
+    background-image: url("../../../../assets/images/rightBlackArrowSlick.png");
+  }
+}

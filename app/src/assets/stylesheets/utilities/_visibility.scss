@@ -1,0 +1,15 @@
+.is-hidden {
+  @include responsive-style-classes {
+    display: none !important;
+  }
+}
+
+.is-invisible {
+  @include responsive-style-classes {
+    visibility: hidden !important;
+  }
+}
+
+.no-scroll{
+  overflow-y: hidden !important;
+}

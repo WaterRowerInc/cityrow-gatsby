@@ -1,0 +1,34 @@
+import { builder } from "@builder.io/react";
+import "@builder.io/widgets";
+
+import "./builderComponents/AccessoriesCatalog/AccessoriesCatalog.builder";
+import "./builderComponents/ApparelCatalog/ApparelCatalog.builder";
+import "./builderComponents/CarouselFullImage/CarouselFullImage.builder";
+import "./builderComponents/CarouselImageDescription/CarouselImageDescription.builder";
+import "./builderComponents/Carousel/CarouselReview.builder";
+import "./builderComponents/CarouselSitePages/CarouselSitePages.builder";
+import "./builderComponents/Carousel/CarouselTeam.builder";
+import "./builderComponents/ContactField/ContactField.builder";
+import "./builderComponents/DynamicForm/DynamicForm.builder";
+import "./builderComponents/FeatureBanner/FeatureBanner.builder";
+import "./builderComponents/GrandImage/GrandImage.builder";
+import "./builderComponents/GridCollection/GridCollection.builder";
+import "./builderComponents/Hero/Hero.builder";
+import "./builderComponents/ImageWithDetails/ImageWithDetails.builder";
+import "./builderComponents/Information/Information.builder";
+import "./builderComponents/InstructorBio/InstructorBioCollection.builder";
+import "./builderComponents/MarketingCallOut/MarketingCallOut.builder";
+import "./builderComponents/MobileStoresLinks/MobileStoresLinks.builder";
+import "./builderComponents/NewsletterModal/NewsletterModal.builder";
+import "./builderComponents/PurchaseConfirmation/PurchaseConfirmation.builder";
+import "./builderComponents/PressCarousel/PressCarousel.builder";
+import "./builderComponents/Product/Product.builder";
+import "./builderComponents/ProductComparison/ProductComparison.builder";
+import "./builderComponents/Ribbon/Ribbon.builder";
+import "./builderComponents/ShopAll/ShopAll.builder";
+import "./builderComponents/SwellProductsList/SwellProductsList.builder";
+import "./builderComponents/TextWithParalaxImages/TextWithParalaxImages.builder";
+import "./builderComponents/Title/Title.builder";
+import "./builderComponents/TrustPilotReviews/TrustPilotReviews.builder";
+
+builder.init(process.env.GATSBY_BUILDER_API_KEY);

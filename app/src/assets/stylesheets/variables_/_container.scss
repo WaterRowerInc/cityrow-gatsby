@@ -1,0 +1,19 @@
+/**
+ * Used to define common container margins for overall layout alignment
+ *
+ * Sample:
+ * $content-container-spacing-side: 8.5%;
+ * $content-container-spacing-side-small: 8.5%;
+ * $content-container-spacing-side-medium: 4%;
+ * $content-container-spacing-side-large: 14%;
+ **/
+
+$content-container-spacing-side: 25px;
+$content-container-spacing-side-small: 25px;
+$content-container-spacing-side-medium:25px;
+$content-container-spacing-side-large: 25px;
+
+$content-container-small-max-width: 750px;
+$content-container-medium-max-width: 960px;
+$content-container-large-max-width: 1140px;
+//$content-container-full-max-width: map-get($breakpoints, 'max-container');

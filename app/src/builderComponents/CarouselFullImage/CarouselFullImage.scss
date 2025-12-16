@@ -1,0 +1,250 @@
+@import "../../assets/stylesheets/variables_/palette";
+@import "../../assets/stylesheets/mixins/responsive";
+
+.carousel-full-image{
+  min-height: 648px;
+  @include on-medium-device {
+    min-height: 828px;
+  }
+
+  &__content{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-height: 648px;
+    height: 100%;
+    width: 100%;
+    @include on-medium-device {
+      max-height: unset;
+    }
+  }
+
+  &__content-frame{
+    height: 100%;
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    @include on-medium-device {
+      flex-direction: column;
+    }
+
+    &__data{
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 100%;
+      width: 40%;
+      @include on-medium-device {
+        width: 100%;
+        padding: 40px 20px;
+        min-width: unset;
+        align-content: center;
+      }
+    }
+
+    &__image-section{
+      display: flex;
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+      width: 60%;
+      min-height: 648px;
+
+      @include on-medium-device {
+        background-size: cover;
+        background-position: top;
+        width: 100%;
+        height: 548px;
+        min-height: unset;
+        min-width: unset;
+        border-bottom: 1px solid $blue-grey;
+      }
+
+      &--full{
+        background-size: contain;
+      }
+
+      @include on-mobile {
+        height: 384px;
+      }
+    }
+
+    &__header-section{
+      font-family: "GothamMedium", serif;
+      color: $black;
+      line-height: 36px;
+      font-weight: 400;
+      font-size: 30px;
+      text-align: left;
+      margin-bottom: 32px;
+      max-width: 392px;
+      width: 100%;
+      text-transform: capitalize;
+      @include on-medium-device {
+        line-height: 26.4px;
+        font-size: 22px;
+        text-align: center;
+        margin-bottom: 24px;
+      }
+    }
+
+    &__element-section{
+      margin-bottom: 34px;
+      max-width: 392px;
+      @include on-medium-device {
+        border-left: unset;
+        padding-left: 0;
+      }
+    }
+
+    &__title-section{
+      border-left: 8px solid $soft-light-blue;
+      font-family: "GothamMedium", serif;
+      color: $black;
+      line-height: 24px;
+      font-weight: 400;
+      font-size: 24px;
+      margin-bottom: 16px;
+      padding-left: 12px;
+      text-align: left;
+      text-transform: capitalize;
+      @include on-medium-device {
+        line-height: 24px;
+        font-size: 18px;
+        text-align: center;
+        margin-bottom: 12px;
+      }
+    }
+
+    &__body-section{
+      border-left: 8px solid $soft-light-blue;
+      font-family: "Open Sans", serif;
+      padding-left: 12px;
+      color: $black;
+      line-height: 24px;
+      font-weight: 400;
+      font-size: 16px;
+      text-align: left;
+
+      @include on-medium-device {
+        border-left: 0;
+        line-height: 24px;
+        font-size: 16px;
+        text-align: center;
+        margin-bottom: 26px;
+      }
+    }
+
+  }
+}
+
+.carousel-full-image__content .slick-slider.custom-carousel-full-image {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.carousel-full-image .slick-prev, .carousel-full-image .slick-next {
+  display: none !important;
+}
+
+
+.carousel-full-image__content-frame__arrows-section{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  width: 100%;
+  max-width: 392px;
+  @include on-medium-device {
+    justify-content: space-between;
+    margin: 0 auto;
+    max-width: unset;
+    width: 80px;
+  }
+
+  &--left {
+    background-image: url('../../../static/leftBlackArrowSlick.png');//('../../../assets/images/leftGrayArrowSlick.png');
+    width: 32px;
+    height: 32px;
+    margin-right: 38px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    cursor: pointer;
+    z-index: 2;
+
+
+    &:hover, &:focus{
+      background-image: url('../../../static/leftBlackArrowSlick.png');//('../../../assets/images/leftGrayArrowSlick.png');
+      width: 32px;
+      height: 32px;
+      background-repeat: no-repeat;
+      background-size: contain;
+      z-index: 2;
+    }
+  }
+
+  &--right {
+    background-image: url('../../../static/rigthBlackArrowSlick.png');
+    width: 32px;
+    height: 32px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    cursor: pointer;
+    z-index: 2;
+
+    &:hover, &:focus{
+      background-image: url('../../../static/rigthBlackArrowSlick.png');
+      width: 32px;
+      height: 32px;
+      background-size: contain;
+      background-repeat: no-repeat;
+      z-index: 2;
+    }
+  }
+}
+
+.carousel-full-image__links{
+  margin-top: 24px;
+  border-top: 1px solid $grey;
+  padding-top: 24px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: row;
+  width: 100%;
+  max-width: 392px;
+
+  a {
+    margin-right: 24px;
+
+    @include on-medium-device {
+      margin: 0;
+
+      button {
+        width: 200px;
+        min-height: 40px;
+        margin-bottom: 20px;
+      }
+    }
+  }
+
+  @include on-medium-device {
+    flex-direction: column;
+    max-width: unset;
+  }
+}
+
+.carousel-full-image__links > .secondary_price__container{
+  padding-bottom: 0;
+  padding-left: 24px;
+  max-width: 205px;
+
+  @include on-medium-device {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}

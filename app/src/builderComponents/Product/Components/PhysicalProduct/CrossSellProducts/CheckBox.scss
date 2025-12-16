@@ -1,0 +1,72 @@
+@import "src/assets/stylesheets/variables_/palette";
+@import 'src/assets/stylesheets/mixins/responsive';
+
+.checkBox__ {
+  &container {
+    display: flex;
+    align-items: center;
+    margin-top: 32px;
+  }
+
+  &wrapper {
+    cursor: pointer;
+    display: block;
+    position: relative;
+    padding: 5px 0 5px 40px;
+    user-select: none;
+    font-family: GothamMedium, serif;
+    font-size: 12px;
+    letter-spacing: 1px;
+  }
+
+  &wrapper input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+  }
+
+  &checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: white;
+    height: 24px;
+    width: 24px;
+    border: 2px solid $blue-grey;
+    border-radius: 2px;
+  }
+
+  &wrapper:hover input ~ &checkmark {
+    background-color: #ccc;
+  }
+
+  &wrapper input:checked ~ &checkmark {
+    background-color: white;
+  }
+
+  &checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+  }
+
+  &wrapper input:checked ~ &checkmark:after {
+    display: block;
+  }
+
+  &wrapper:hover input:checked ~ &checkmark {
+    background-color: #ccc;
+  }
+
+  &wrapper &checkmark:after {
+    left: 7px;
+    top: 1px;
+    width: 5px;
+    height: 16px;
+    border: solid black;
+    border-width: 0 3px 3px 0;
+    transform: rotate(45deg);
+  }
+}

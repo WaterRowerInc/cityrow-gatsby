@@ -1,0 +1,35 @@
+@import "../../../assets/stylesheets/variables_/palette";
+@import '../../../assets/stylesheets/mixins/responsive';
+
+.productInstallments__ {
+  &container {
+    display: flex;
+    margin-top: 8px;
+    @include on-mobile {
+      flex-direction: column;
+    }
+  }
+
+  &text {
+    font-family: 'Open Sans', serif;
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: normal;
+    color: $stale-grey;
+    margin: 0;
+    padding: 0;
+  }
+
+  &financingText {
+    font-family: 'Open Sans', serif;
+    font-weight: 300;
+    font-size: 14px;
+    margin: 0 0 0 2px;
+    padding: 0;
+    color: $stale-grey;
+    text-decoration: underline;
+    @include on-mobile {
+      margin: 0;
+    }
+  }
+}

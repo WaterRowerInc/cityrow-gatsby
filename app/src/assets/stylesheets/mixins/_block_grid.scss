@@ -1,0 +1,23 @@
+@mixin block-grid-display($width: auto) {
+  display: inline-block;
+  vertical-align: top;
+  float: left;
+  width: $width;
+}
+
+
+@mixin block-grid($gutter-width, $per-row, $item-el) {
+  &:nth-of-type(#{$per-row}n + #{$per-row + 1}) {
+    clear: both;
+  }
+
+  &:not(:nth-of-type(#{$per-row}n+1)) {
+    margin-left: $gutter-width;
+  }
+
+  #{$item-el} {
+    // We use "* #{1 / $per-row}" because Internet Explorer may cause issues with rounding up on a division
+    // We use "- 1px" at the end because Internet Explorer is bad at calc and 1px won't make a noticeable difference
+    @include block-grid-display(calc((100% - #{$gutter-width} * (#{$per-row} - 1)) * #{1 / $per-row} ));
+  }
+}

@@ -1,0 +1,81 @@
+html {
+  position: relative;
+  min-height: 100%;
+  //background-color: #000000;
+  // overflow: hidden;
+}
+
+body {
+  //background-color: $black;
+  color: $default-font-color;
+  font-size: $default-font-size;
+  font-weight: $font-weight-normal;
+  line-height: $default-line-height;
+  font-family: $default-font-family;
+  -webkit-font-smoothing: antialiased;
+  // overflow-y: hidden;
+  -webkit-overflow-scrolling: touch;
+
+  @include respond-to(small) {
+    font-size: $default-font-size-small;
+  }
+
+  @include respond-to(medium) {
+    font-size: $default-font-size-medium;
+  }
+
+  @include respond-to(large) {
+    font-size: $default-font-size-large;
+  }
+
+  * {
+    box-sizing: border-box;
+
+    &:before,
+    &:after {
+      box-sizing: border-box;
+    }
+  }
+
+  a {
+    color: inherit;
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  h1, h2, h3, h4, h5 {
+    display: block;
+    -webkit-margin-before: 1em;
+    -webkit-margin-after: 1em;
+    -webkit-margin-start: 0px;
+    -webkit-margin-end: 0px;
+    font-weight: bold;
+  }
+}
+button, input, optgroup, select, textarea{
+  font-family: $default-font-family;
+}
+
+select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background-image:
+    linear-gradient(45deg, transparent 50%, $charcoal-grey 50%),
+    linear-gradient(135deg, $charcoal-grey 50%, transparent 50%);
+  background-position:
+    calc(100% - 20px) calc(1em + 2px),
+    calc(100% - 15px) calc(1em + 2px),
+    calc(100% - 2.0em) 0.5em;
+  background-size:
+    5px 5px,
+    5px 5px,
+    1px 1.5em;
+  background-repeat: no-repeat;
+}
+
+select::webkit-ex {
+  display: none;
+}

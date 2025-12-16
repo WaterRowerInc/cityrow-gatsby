@@ -1,0 +1,27 @@
+.clearfix {
+  @include clearfix;
+}
+
+.block-center-h{
+  display: flex;
+  align-items: center;
+}
+
+.block-center-w{
+  display: flex;
+  justify-content: center;
+}
+
+.block-center-hw{
+  @extend .block-center-h;
+  @extend .block-center-w;
+}
+
+.full-width{
+  width: 100%;
+}
+
+.block-between{
+  display: flex;
+  justify-content:space-between;
+}

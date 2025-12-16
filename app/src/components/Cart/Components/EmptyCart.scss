@@ -1,0 +1,24 @@
+.cart__empty__ {
+  &container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 72px;
+  }
+
+  &text {
+    font-family: GothamBook, serif;
+    font-size: 14px;
+    font-weight: 325;
+    line-height: 22px;
+    width: 327px;
+    text-align: center;
+  }
+
+  &button {
+    width: 200px;
+    height: 40px;
+    margin-top: 32px;
+    margin-bottom: 32px;
+  }
+}

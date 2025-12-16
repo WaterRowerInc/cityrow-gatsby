@@ -1,0 +1,9 @@
+// position should be either 'top' or 'bottom'
+@mixin fix-to($position, $z-index-inc: 0) {
+  z-index: $z-index-fixed + $z-index-inc;
+  position: fixed;
+  #{$position}: 0;
+  left: 0;
+  width: 100%;
+}
+

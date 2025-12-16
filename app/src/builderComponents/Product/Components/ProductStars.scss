@@ -1,0 +1,15 @@
+@import "../../../assets/stylesheets/variables_/palette";
+@import '../../../assets/stylesheets/mixins/responsive';
+
+.product-stars__ {
+  &container__ {
+    display: flex;
+
+    img {
+      width: 16px;
+      height: 16px;
+      object-fit: contain;
+      margin-right: 6px;
+    }
+  }
+}

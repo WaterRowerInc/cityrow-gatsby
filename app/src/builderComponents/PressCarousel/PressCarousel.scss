@@ -1,0 +1,113 @@
+@import '../../assets/stylesheets/variables_/palette';
+@import '../../assets/stylesheets/mixins/responsive';
+
+
+.pressCarousel__ {
+  &container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    min-height: 400px;
+    background-color: $blue-nautica;
+    padding: 78px 0;
+
+    @include on-medium-device {
+      padding: 64px 0;
+
+      .slick-list {
+        margin-bottom: 40px;
+      }
+
+      .slick-dots {
+        bottom: -30px !important;
+      }
+    }
+
+    @include on-mobile {
+      min-height: auto;
+      padding: 84px 0;
+    }
+
+    .slick-dots {
+      bottom: -65px;
+    }
+
+    .slick-dots li button:before {
+      color: white;
+    }
+
+    .slick-center .pressCarousel__image {
+      opacity: 1;
+      height: 40px;
+    }
+  }
+
+  &wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    @include on-mobile {
+      margin-top: 40px;
+    }
+  }
+
+  &title {
+    font-family: 'GothamBook', serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 24px;
+    line-height: 29px;
+    text-align: center;
+    color: $white;
+    margin: 0;
+    text-transform: capitalize;
+
+    @include on-medium-device {
+      font-size: 24px;
+    }
+  }
+
+  &slider {
+    width: 100%;
+    margin: 32px 0 40px;
+
+    @include on-medium-device {
+      margin: 24px 0 0;
+    }
+    @include on-mobile {
+      margin: 20px 0;
+    }
+  }
+
+  &brandSlider {
+    height: 40px;
+    width: 100%;
+
+    @include on-medium-device {
+      height: 75px !important;
+    }
+
+    @include on-mobile {
+      margin-bottom: 50px;
+    }
+  }
+
+  &brandContainer {
+    display: flex !important;
+    justify-content: space-around;
+    align-items: flex-end;
+    height: 50px;
+  }
+
+  &image {
+    height: 24px;
+    width: auto;
+    opacity: .5;
+    transition: opacity .5s;
+    margin-right: 15px;
+    margin-left: 15px;
+  }
+}

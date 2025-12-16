@@ -1,0 +1,72 @@
+@import "src/assets/stylesheets/variables_/palette";
+@import "src/assets/stylesheets/mixins/responsive";
+
+.subscription-manager__ {
+  &container__ {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 88px;
+    width: 100%;
+
+    &title {
+      text-align: center;
+      font-family: "GothamMedium", sans-serif;
+      font-style: normal;
+      font-weight: 350;
+      font-size: 30px;
+      line-height: 36px;
+      color: $black;
+
+      @include on-mobile{
+        font-size: 24px;
+      }
+    }
+
+    &title-border {
+      height: 4px;
+      width: 400px;
+      background-color: $ice-blue;
+      margin: 24px 0 16px 0;
+      color: $invisible;
+
+      @include on-mobile {
+        width: calc(100% - 64px);
+      }
+    }
+
+    &description {
+      font-family: "Open Sans", sans-serif;
+      font-weight: normal;
+      font-style: normal;
+      font-size: 16px;
+      line-height: 24px;
+      color: $stale-grey;
+      text-align: center;
+      max-width: 567px;
+
+      a {
+        color: $cerulean;
+        text-decoration: underline;
+        font-weight: 600;
+        margin-left: 8px;
+      }
+    }
+  }
+
+  &plans {
+    display: flex;
+    flex-direction: column;
+    max-width: 752px;
+    width: 100%;
+  }
+}
+
+.credit-card-input {
+  width: 567px;
+
+  @include on-mobile {
+    width: 90vw;
+  }
+}

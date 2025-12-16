@@ -1,0 +1,35 @@
+@import "../../assets/stylesheets/variables_/palette";
+@import "../../assets/stylesheets/mixins/responsive";
+
+.alert-messages__main {
+  position: fixed;
+  width: 100%;
+}
+
+.alert-messages__alert {
+  width: 100%;
+  color: $white;
+  padding: 10px;
+  text-align: center;
+  transition: 0.5s;
+  font-size: 16px;
+  text-transform: uppercase;
+
+  @include on-mobile {
+    font-size: 12px;
+  }
+
+  &--error {
+    background-color: $red;
+  }
+
+  &--success {
+    background-color: $green;
+  }
+
+  &--hidden {
+    opacity: 0;
+    height: 0;
+    padding: 0;
+  }
+}

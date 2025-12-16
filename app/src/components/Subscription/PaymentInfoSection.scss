@@ -1,0 +1,83 @@
+@import "../../assets/stylesheets/variables_/palette";
+@import "../../assets/stylesheets/mixins/responsive";
+
+.payment-info-section__ {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  &container__ {
+    padding: 12px 28px;
+    min-width: 567px;
+    background: $payment-info-container;
+    display: flex;
+    justify-content: space-between;
+
+    @include on-mobile {
+      flex-direction: column;
+      min-width: calc(100vw - 32px);
+
+      div {
+        margin-bottom: 10px;
+      }
+    }
+
+    &title {
+      font-family: "GothamBook", sans-serif;
+      font-style: normal;
+      font-weight: 325;
+      font-size: 14px;
+      line-height: 17px;
+      letter-spacing: 0.692308px;
+      text-transform: uppercase;
+      color: $stale-grey;
+    }
+
+    &detail {
+      font-family: "GothamMedium", sans-serif;
+      font-style: normal;
+      font-weight: 350;
+      font-size: 18px;
+      line-height: 22px;
+      text-transform: uppercase;
+      color: $blue-grey;
+      margin-top: 8px;
+    }
+
+    &number-container {
+      min-width: 166px;
+    }
+
+    &expiration-container {
+      min-width: 142px;
+    }
+  }
+
+  &button {
+    margin-top: 24px;
+    min-width: 158px;
+    min-height: 40px;
+    background: $white;
+    font-family: "OpenSansCondensed", sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 20px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: $dark_blue;
+    border: 1px solid $dark_blue;
+    box-sizing: border-box;
+    border-radius: 2px;
+    padding: 10px 24px;
+    cursor: pointer;
+
+    &:hover,
+    &:focus {
+      opacity: 0.5;
+    }
+  }
+}

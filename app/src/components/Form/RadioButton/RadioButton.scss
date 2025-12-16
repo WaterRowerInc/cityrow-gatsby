@@ -1,0 +1,18 @@
+@import '../../../assets/stylesheets/variables_/palette';
+@import '../../../assets/stylesheets/mixins/responsive';
+
+.radio-button {
+  width: 23px;
+  height: 23px;
+  object-fit: contain;
+  margin: 1px 20px 0 0;
+  cursor: pointer;
+
+  &:hover {
+    opacity: .8;
+  }
+}
+
+.radio-button-disabled {
+  cursor: not-allowed;
+}

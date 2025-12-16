@@ -1,0 +1,220 @@
+@import "src/assets/stylesheets/variables_/palette";
+@import "src/assets/stylesheets/mixins/responsive";
+
+.cart-details__item__ {
+  &container {
+    margin-top: 24px;
+  }
+
+  &subtitle {
+    color: $blue-grey;
+    font-family: "GothamBook", serif;
+    font-style: normal;
+    font-weight: 325;
+    font-size: 14px;
+    line-height: 24px;
+    margin: 2px 0;
+  }
+
+  &disclaimer{
+    font-family: "Open Sans", sans-serif;
+    font-size: 14px;
+    color: $stale-grey;
+    margin: 4px 0;
+  }
+
+  &name-price-wrapper {
+    display: flex;
+  }
+
+  &name {
+    flex: 1;
+    margin: 0;
+    padding: 0;
+    font-family: "GothamMedium", serif;
+    font-size: 18px;
+    font-weight: 350;
+    color: $blue-grey;
+  }
+
+  &price {
+    margin: 0;
+    padding: 0;
+    font-family: "Open Sans", sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    color: $blue-grey;
+  }
+
+  &price-striked {
+    text-decoration: line-through;
+    margin-left: 5px;
+  }
+
+  &price-bold {
+    margin: 0;
+    padding: 0;
+    font-family: "Open Sans", sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    color: $blue-grey;
+  }
+
+  &promo__ {
+    &wrapper {
+      display: flex;
+      justify-content: space-between;
+      margin: 4px 0 2px;
+    }
+
+    &title {
+      color: $cerulean;
+      font-family: "GothamMedium", serif;
+      font-style: normal;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 24px;
+      margin: 0;
+    }
+
+    &price {
+      color: $cerulean;
+      font-family: "Open Sans", sans-serif;
+      font-style: normal;
+      font-weight: 600;
+      font-size: 16px;
+      line-height: 22px;
+      margin: 0;
+    }
+  }
+
+  &bundle__ {
+    &name {
+      color: $slate-grey;
+      font-family: "Open Sans", sans-serif;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 14px;
+      line-height: 22px;
+      margin: 0;
+    }
+
+    &items {
+      padding-left: 20px;
+    }
+
+    &item {
+      color: $slate-grey;
+      font-family: "Open Sans", sans-serif;
+      font-style: normal;
+      font-weight: 300;
+      font-size: 14px;
+      line-height: 22px;
+      margin: 0;
+    }
+
+    &attributes {
+      padding-left: 20px;
+      display: flex;
+    }
+
+    &attribute {
+      margin: 0 12px 0 0;
+      color: $slate-grey;
+      font-family: "Open Sans", sans-serif;
+      font-style: normal;
+      font-weight: 300;
+      font-size: 14px;
+      line-height: 22px;
+    }
+  }
+
+  &attachments__ {
+    &container {
+    }
+
+    &wrapper {
+      display: flex;
+      justify-content: space-between;
+      padding-left: 20px;
+    }
+
+    &title {
+      font-family: "GothamBook", sans-serif;
+      font-style: normal;
+      font-weight: 325;
+      font-size: 14px;
+      line-height: 24px;
+      color: $slate-grey;
+      margin: 0;
+    }
+
+    &price {
+      font-family: "Open Sans", sans-serif;
+      font-style: normal;
+      font-weight: 600;
+      font-size: 16px;
+      line-height: 22px;
+      color: $slate-grey;
+      margin: 0;
+    }
+  }
+
+  &options__ {
+    &container {
+      display: flex;
+    }
+
+    &wrapper {
+      display: flex;
+      margin-right: 12px;
+    }
+
+    &name {
+      color: $stale-grey;
+      font-family: "Open Sans", serif;
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 22px;
+    }
+
+    &value {
+      color: $stale-grey;
+      font-family: "Open Sans", serif;
+      font-size: 14px;
+    }
+  }
+
+  &bundle__ {
+    &container{
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 8px;
+    }
+
+    &title {
+      color: $stale-grey;
+      font-family: "Open Sans", serif;
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 22px;
+    }
+  }
+
+  &description {
+    color: $stale-grey;
+    font-family: "Open Sans", serif;
+    font-size: 14px;
+    line-height: 22px;
+    margin: 4px 0 8px;
+  }
+
+  &remove {
+    font-family: "Open Sans", serif;
+    font-size: 14px;
+    font-weight: 600;
+    color: $blue-nautica;
+    text-decoration: underline;
+    cursor: pointer;
+  }
+}

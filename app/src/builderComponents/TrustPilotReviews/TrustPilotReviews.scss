@@ -1,0 +1,12 @@
+@import "src/assets/stylesheets/variables_/palette";
+@import "src/assets/stylesheets/mixins/responsive";
+
+.trustpilot-reviews__ {
+  &container {
+    width: 100%;
+    
+    @include on-medium-device {
+      padding: 0 24px;
+    }
+  }
+}

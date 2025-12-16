@@ -1,0 +1,21 @@
+@import "./typography.scss";
+@import "./index.scss";
+@import "mixins/responsive";
+
+b {
+    font-family: GothamBook, serif;
+    font-weight: bold;
+  }
+
+p, h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+  padding: 0;
+}
+
+.header__head-room + div.builder-component, .sub-head__container__ + div.builder-component {
+  padding-top: 72px;
+
+  @include on-mobile {
+    padding-top: 54px;
+  }
+}

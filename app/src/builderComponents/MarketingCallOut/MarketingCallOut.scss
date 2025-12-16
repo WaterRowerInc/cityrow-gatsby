@@ -1,0 +1,80 @@
+@import "../../assets/stylesheets/variables_/palette";
+@import "../../assets/stylesheets/mixins/responsive";
+
+.marketing-call-out__ {
+  &container {
+    display: flex;
+    justify-content: center;
+    background-color: $dark_blue;
+  }
+
+  &inner-container {
+    display: flex;
+    justify-content: center;
+    max-width: 1270px;
+    width: 100%;
+    padding: 54px 128px;
+
+    @include on-medium-device {
+      padding: 48px 88px;
+      flex-direction: column;
+    }
+
+    @include on-mobile {
+      padding: 32px 24px;
+    }
+  }
+
+  &text__ {
+    &container {
+      flex: 3;
+
+      @include on-medium-device {
+        flex-direction: column;
+      }
+    }
+
+    &title {
+      font-family: "GothamMedium", sans-serif;
+      color: $white;
+      font-size: 30px;
+      line-height: 36px;
+      margin-bottom: 16px;
+
+      @include on-medium-device {
+        font-size: 24px;
+        line-height: 28px;
+        margin-bottom: 12px;
+      }
+    }
+
+    &description {
+      font-size: 22px;
+      line-height: 32px;
+      font-weight: 300;
+      font-family: "Open Sans", sans-serif;
+      color: $white;
+
+      @include on-medium-device {
+        font-size: 18px;
+        line-height: 28px;
+      }
+    }
+  }
+
+  &cta_link {
+    text-decoration: none;
+
+    &_container {
+      flex: 1.5;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      @include on-medium-device{
+        justify-content: left;
+        margin-top: 32px;
+      }
+    }
+  }
+}

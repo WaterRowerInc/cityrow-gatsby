@@ -1,0 +1,91 @@
+@import "../../assets/stylesheets/variables_/palette";
+@import "../../assets/stylesheets/mixins/responsive";
+
+.img_frame_fix_width__ {
+  &container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    @include respond-to(medium) {
+      min-height: 648px;
+      background-color: $white;
+    }
+    @include on-mobile {
+      background-color: $white;
+    }
+  }
+  &inner-container {
+    display: flex;
+    flex-direction: column;
+    padding: 30px 25px 0 25px;
+    &--reverse {
+      padding: 30px 25px 0 25px;
+      flex-direction: column;
+    }
+    @include on-mobile {
+      flex-direction: column-reverse;
+    }
+
+    @include respond-to(small) {
+      padding-top: 0px;
+      padding-left: 30px;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      background-color: $white;
+      &--reverse {
+        flex-direction: row-reverse;
+        padding-left: unset;
+        padding-right: 20px;
+      }
+    }
+    @include respond-to(medium) {
+        padding-top: 0px;
+        padding-left: 30px;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        max-width: 1200px;
+        width: 100%;
+        background-color: $white;
+        &--reverse {
+          padding-left: 0;
+          padding-right: 0px;
+          flex-direction: row-reverse;
+        }
+      }
+  }
+
+  &first {
+    margin-bottom: 20px;
+    &--reverse {
+      margin-top: 20px;
+    }
+    @include respond-to(small) {
+      margin: 20px 0 0px 0;
+      width: 257px;
+    }
+    @include respond-to(medium) {
+      width: 494px;
+      display: flex;
+      justify-content: center;
+    }
+  }
+
+  &second {
+    &-image {
+      width: 100%;
+    }
+    @include respond-to(small) {
+      max-width: 424px;
+    }
+    @include respond-to(medium) {
+      max-width: 700px;
+      margin-left: 40px;
+      &--reverse {
+        margin-left: 0px;
+      }
+    }
+  }
+}

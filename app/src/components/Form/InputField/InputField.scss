@@ -1,0 +1,149 @@
+@import '../../../assets/stylesheets/variables_/palette';
+@import '../../../assets/stylesheets/mixins/responsive';
+
+.hidden-medium {
+
+  @include on-medium-device {
+    display: none;
+  }
+}
+
+.visible-medium {
+  display: none;
+
+  @include on-medium-device {
+    display: block;
+  }
+}
+
+.input-field__ {
+
+  &lowercase {
+    text-transform: lowercase;
+  }
+
+  &size-100 {
+    width: 100%;
+  }
+
+  &size-50 {
+    width: 48%;
+
+    @include on-medium-device {
+      width: 100%;
+    }
+  }
+
+  &size-30 {
+    width: 30%;
+
+    @include on-medium-device {
+      width: 48%;
+    }
+  }
+
+  &size-85 {
+    width: 81%;
+
+    @include on-medium-device {
+      width: 48%;
+    }
+  }
+
+  &size-15 {
+    width: 15%;
+
+
+    @include on-medium-device {
+      width: 48%;
+    }
+  }
+
+  &middle-input {
+    margin: 0 12px;
+  }
+
+  &error {
+    border: 1px solid $flash-msg-error !important;
+  }
+
+  &container__ {
+
+    margin: 25px 0 7px;
+
+    &label-row__ {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+
+      h4 {
+        text-align: left;
+        font-family: "GothamBook", sans-serif;
+        font-weight: 325;
+        font-style: normal;
+        font-size: 14px;
+        line-height: 17px;
+        color: $black;
+        margin: 0 0 3px;
+      }
+
+      a {
+        text-align: right;
+        font-family: "Open Sans", sans-serif;
+        font-weight: 600;
+        font-style: normal;
+        font-size: 12px;
+        line-height: 16px;
+        color: $soft-blue;
+        margin: 0 0 3px;
+      }
+    }
+
+    &input-row__ {
+
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+
+      div {
+        display: block;
+      }
+
+      &error-label {
+        font-family: "Open Sans", sans-serif;
+        font-weight: 600;
+        color: $flash-msg-error;
+        font-size: 14px;
+        line-height: 17px;
+        margin: 4px 0 0 0;
+
+        :empty:before {
+          height: 14px;
+        }
+      }
+
+      input, select {
+        position: relative;
+        padding: 8px 12px;
+        font-family: "Open Sans", sans-serif;
+        font-style: normal;
+        font-weight: normal;
+        color: $black;
+        size: 16px;
+        line-height: 22px;
+        border: 1px solid $slate-grey;
+        border-radius: 2px !important;
+        outline: none !important;
+
+        &:focus, &:hover {
+          border-radius: 0 !important;
+          border: 1px solid $cerulean;
+        }
+
+        &::placeholder {
+          color: $stale-grey;
+        }
+      }
+    }
+  }
+}

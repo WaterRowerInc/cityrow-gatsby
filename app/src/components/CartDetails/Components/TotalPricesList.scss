@@ -1,0 +1,30 @@
+@import "src/assets/stylesheets/variables_/palette";
+@import "src/assets/stylesheets/mixins/responsive";
+.cart-details__promo__discounts__ {
+  &container {
+    padding: 16px 0 24px;
+    border-bottom: 1px solid $slate-grey;
+  }
+  &line__{
+    &container {
+      display: flex;
+      margin-top: 8px;
+    }
+    &title {
+      flex: 1;
+      font-family: GothamBook, serif;
+      font-size: 16px;
+      font-weight: 325;
+      color: $blue-grey;
+    }
+    &price {
+      font-family: "Open Sans", serif;
+      font-size: 16px;
+      font-weight: 600;
+      color: $blue-grey;
+      &-blue {
+        color: $cerulean;
+      }
+    }
+  }
+}

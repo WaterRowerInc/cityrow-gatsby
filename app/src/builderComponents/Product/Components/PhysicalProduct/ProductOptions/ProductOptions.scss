@@ -1,0 +1,12 @@
+@import "src/assets/stylesheets/variables_/palette";
+@import 'src/assets/stylesheets/mixins/responsive';
+
+.productOptions__ {
+  &container {
+    margin-top: 32px;
+  }
+  &sizeAndQtyContainer {
+    display: flex;
+    align-items: center;
+  }
+}

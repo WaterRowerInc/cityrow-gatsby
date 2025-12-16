@@ -1,0 +1,178 @@
+@import '../../../../assets/stylesheets/variables_/palette';
+@import '../../../../assets/stylesheets/mixins/responsive';
+
+.instructor-bio-item__ {
+
+  &container__ {
+
+    width: 864px;
+    height: auto;
+    padding: 32px;
+    display: flex;
+    background: $white;
+    justify-content: space-between;
+
+    @include on-medium-device {
+      width: 768px;
+    }
+
+    @include on-mobile {
+      height: auto;
+      flex-direction: column;
+      width: 100vw;
+      padding: 32px 0;
+    }
+
+    &photo {
+      width: 296px;
+      height: 356px;
+      object-fit: cover;
+
+      @include on-medium-device {
+        height: 376px;
+      }
+
+      @include on-mobile {
+        height: 376px;
+        width: calc(100vw);
+        padding: 0 32px;
+      }
+    }
+
+    &text-content__ {
+
+      padding-left: 40px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+
+      @include on-mobile {
+        padding: 32px 0 0;
+      }
+
+      &name {
+        font-size: 30px;
+        color: $black;
+        margin: 0 0 4px 0;
+        font-weight: 350;
+        line-height: 36px;
+        font-family: "GothamMedium", serif;
+
+        @include on-mobile {
+          padding: 0 32px;
+        }
+      }
+
+      &username {
+        font-size: 16px;
+        color: $slate-grey;
+        margin: 0 0 16px 0;
+        line-height: 24px;
+        font-family: "GothamBook", serif;
+        font-weight: 325;
+
+        @include on-mobile {
+          padding: 0 32px;
+        }
+      }
+
+      &description {
+        font-size: 16px;
+        line-height: 24px;
+        color: $black;
+        text-align: justify;
+        margin: 0 0 10px 0;
+        font-family: "Open Sans", sans-serif;
+        font-weight: normal;
+
+        @include on-mobile {
+          padding: 0 32px;
+          margin: 0 0 30px 0;
+        }
+      }
+
+      &classes-container__ {
+
+        background: $slate-gray-transparent;
+        border-radius: 8px;
+        padding: 16px 0;
+        position: relative;
+
+        @include on-mobile {
+          background: none;
+          padding: 0;
+        }
+
+        &title-row__ {
+
+          display: flex;
+          justify-content: space-between;
+          margin: 0 0 16px 0;
+          padding: 0 16px;
+
+          @include on-mobile {
+            padding: 0 32px;
+          }
+
+          &title-text {
+            font-size: 18px;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            font-family: "GothamLight", serif;
+          }
+        }
+
+        &slider {
+          width: 493px;
+          height: 100px;
+          position: initial;
+
+          @include on-medium-device {
+            width: 356px;
+          }
+
+          @include on-mobile {
+            width: 100vw;
+            padding: 0;
+          }
+
+          .slick-list {
+            padding: 0;
+          }
+
+          .slick-dots {
+            display: none !important;
+          }
+
+          .memberStory__carouselArrow {
+            height: 20px !important;
+            width: 20px !important;
+            display: block !important;
+
+            @include on-mobile {
+              display: none !important;
+            }
+
+            &:hover {
+              opacity: .8;
+            }
+          }
+        }
+
+        .memberStory__carouselArrow--arrowLeft {
+          position: absolute;
+          top: 18px;
+          right: 38px;
+          left: unset;
+        }
+
+        .memberStory__carouselArrow--arrowRight {
+          position: absolute;
+          top: 18px;
+          right: 12px;
+          left: unset;
+        }
+      }
+    }
+  }
+}

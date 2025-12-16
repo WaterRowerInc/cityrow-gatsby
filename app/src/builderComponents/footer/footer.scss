@@ -1,0 +1,161 @@
+@import "../../assets/stylesheets/variables";
+@import "../../assets/stylesheets/mixins";
+
+.footer__ {
+  &wrapper {
+    background-color: $white-three;
+    display: flex;
+    justify-content: center;
+  }
+
+  &inner-wrapper {
+    display: flex;
+    justify-content: center;
+    padding: 24px;
+    max-width: 1270px;
+    width: 100%;
+
+    @include on-mobile {
+      flex-direction: column;
+      align-items: center;
+      padding: 24px 0 80px 0;
+    }
+  }
+
+  &container {
+    display: flex;
+
+    @include on-mobile {
+      margin: 16px 0;
+      width: 100%;
+      justify-content: center;
+    }
+  }
+
+  &dropdowns {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &actions {
+    padding-right: 50px;
+  }
+
+  &social-networks__ {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    width: 32px;
+    height: 156px;
+    padding: 0 24px;
+
+    @include on-medium-device {
+      margin-left: 0;
+    }
+
+    &icon {
+      margin-bottom: 25px;
+    }
+
+    &facebook {
+      background: url("../../assets/images/facebookIcon.svg");
+      height: 32px;
+      width: 32px;
+      background-repeat: no-repeat;
+      background-size: contain;
+    }
+
+    &instagram {
+      background: url("../../assets/images/instagramIcon.svg");
+      height: 32px;
+      width: 32px;
+      background-repeat: no-repeat;
+      background-size: contain;
+    }
+
+    &twitter {
+      background: url("../../assets/images/twitterIcon.svg");
+      height: 32px;
+      width: 32px;
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: contain;
+    }
+  }
+
+  &links {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    &__link {
+      display: flex;
+      align-items: center;
+      font-family: "GothamBook", serif;
+      font-size: 18.3px;
+      font-weight: 400;
+      font-style: normal;
+      font-stretch: normal;
+      line-height: 2;
+      letter-spacing: normal;
+      color: $blue-grey;
+      padding-right: 50px;
+    }
+  }
+
+  &stay-touch {
+    max-width: 328px;
+    width: 100%;
+
+    &-title {
+      font-family: "GothamBook", serif;
+      font-size: 14px;
+      font-weight: 300;
+      font-style: normal;
+      font-stretch: normal;
+      line-height: 17px;
+      letter-spacing: normal;
+      margin-bottom: 14px;
+      color: $blue-grey;
+    }
+
+    &-content {
+      width: 50%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+
+      @include on-medium-device {
+        width: 100%;
+      }
+    }
+  }
+
+  &country {
+    max-width: 328px;
+    width: 100%;
+    margin-bottom: 32px;
+
+    &-label {
+      font-family: "GothamBook", serif;
+      font-size: 16px;
+      font-weight: 300;
+      font-stretch: normal;
+      font-style: normal;
+      line-height: normal;
+      letter-spacing: normal;
+      margin-bottom: 14px;
+      color: $blue-grey;
+    }
+
+    .country__available__value {
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    .visible.menu.transition {
+      max-height: 107px;
+    }
+  }
+}

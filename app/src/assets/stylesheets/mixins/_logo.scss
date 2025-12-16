@@ -1,0 +1,12 @@
+@mixin logo-style() {
+  font-weight: $font-weight-bold;
+  color: $brand;
+  font-size: 20px;
+  letter-spacing: 3.2px;
+  text-transform: uppercase;
+
+  &:focus,
+  &:hover{
+    text-decoration: none;
+  }
+}

@@ -1,0 +1,30 @@
+@import "src/assets/stylesheets/variables_/palette";
+
+
+.cart-details__coupon {
+  margin-top: 24px;
+  display: flex;
+  justify-content: space-between;
+  font-family: 'Open Sans', serif;
+
+  &__title{
+    font-weight: 600;
+    font-size: 14px;
+    color: $blue-grey
+  }
+
+  &__description{
+    font-weight: 300;
+    font-size: 14px;
+    color: $blue-grey;
+  }
+
+  img {
+    object-fit: contain;
+    width: 13px;
+    &:hover{
+      opacity: 0.3;
+      cursor: pointer;
+    }
+  }
+}

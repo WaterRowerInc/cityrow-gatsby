@@ -1,0 +1,109 @@
+@import "../../assets/stylesheets/variables_/palette";
+@import "../../assets/stylesheets/mixins/responsive";
+@import "../../assets/stylesheets/mixins/sizes";
+
+.grid_collection__ {
+    &container {
+        display: flex;
+        flex-direction: column;
+        align-content: center;
+        justify-content: center;
+        width: 100%;
+    }
+
+    &element {
+        display: flex;
+        flex-direction: row;
+        align-content: center;
+        justify-content: center;
+        width: 100%;
+        @include on-medium-device {
+          flex-direction: column;
+        }
+        &--even {
+          flex-direction: row-reverse;
+          @include on-medium-device {
+            flex-direction: column;
+          }
+        }
+
+        &_img {
+            background-repeat: no-repeat;
+            background-size: cover;
+            width: 50%;
+            @include aspect-ratio(3, 2);
+            background-position: center;
+            @include on-medium-device {
+              width: 100%;
+            }
+        }
+    }
+
+    &content_container {
+        display: flex;
+        flex-direction: column;
+        align-content: center;
+        justify-content: center;
+        width: 50%;
+        @include on-medium-device {
+          width: 100%;
+          padding-top: 40px;
+          padding-bottom: 40px;
+        }
+        @include on-mobile {
+          padding: 40px 24px;
+        }
+    }
+    &inner_content_container {
+        margin: 0 auto;
+        width: 100%;
+
+        &__header {
+          font-family: "GothamMedium", serif;
+            font-size: 30px;
+            font-weight: 500;
+            font-style: normal;
+            font-stretch: normal;
+            line-height: normal;
+            color: $black;
+            text-align: left;
+            width: 100%;
+            max-width: 430px;
+            margin: 0 auto;
+            margin-bottom: 24px;
+            @include on-medium-device {
+              text-align: center;
+              font-size: 24px;
+            }
+            @include on-mobile {
+              text-align: left;
+              margin: 0;
+              margin-bottom: 16px;
+              font-size: 20px;
+            }
+        }
+
+        &__description {
+          font-family: "Open Sans", serif;
+            font-size: 16px;
+            font-weight: normal;
+            font-style: normal;
+            font-stretch: normal;
+            line-height: 1.5;
+            letter-spacing: 0.5px;
+            color: $black;
+            text-align: left;
+            max-width: 430px;
+            margin: 0 auto;
+            @include on-medium-device {
+              width: 100%;
+              text-align: center;
+            }
+            @include on-mobile {
+              width: 100%;
+              margin: 0;
+              text-align: left;
+            }
+        }
+    }
+}

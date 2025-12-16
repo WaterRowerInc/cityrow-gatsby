@@ -1,0 +1,11 @@
+// main class should be applied to the container of the media (img or video)
+
+.o-responsive-media {
+  @include aspect-ratio;
+
+  &__video {
+    width: 100%;
+    height: 100%;
+  }
+}
+

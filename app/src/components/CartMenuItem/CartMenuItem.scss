@@ -1,0 +1,36 @@
+@import "../../assets/stylesheets/variables_/palette";
+@import "../../assets/stylesheets/mixins/responsive";
+
+.cart-menu-item__ {
+  &container {
+    position: relative;
+  }
+
+  &counter {
+    pointer-events: none;
+    font-family: "Open Sans", sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 13px;
+    color: $white;
+    background: $cerulean;
+    position: absolute;
+    top: -5px;
+    right: -5px;
+    border-radius: 50%;
+    width: 18px;
+    height: 18px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+.d-block{
+  display: block;
+}
+
+.d-none{
+  display: none;
+}

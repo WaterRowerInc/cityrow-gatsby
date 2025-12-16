@@ -1,0 +1,26 @@
+export const subscriptionFixtures = {
+  trialWithoutCreditCard: {
+    id: "anId",
+    name: "a subscription name",
+    nextBillDate: "-",
+    purchaseDate: "06/06/2022",
+    pricing: "aPrice",
+    status: "trialing",
+    active: false,
+    planType: "Monthly",
+    klarna: false,
+    paymentInfo: { number: undefined, klarna: false },
+  },
+  trialWithCreditCard: {
+    id: "anId",
+    name: "a subscription name",
+    nextBillDate: "-",
+    purchaseDate: "06/06/2022",
+    pricing: "aPrice",
+    status: "trialing",
+    active: false,
+    planType: "Monthly",
+    klarna: false,
+    paymentInfo: { number: "aCreditCardNumber", klarna: false },
+  },
+};

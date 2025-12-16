@@ -1,0 +1,47 @@
+$container-default-pos: 'left', 'right';
+
+@mixin container-padding(
+  $padding: $content-container-spacing-side,
+  $padding-small: $content-container-spacing-side-small,
+  $padding-medium: $content-container-spacing-side-medium,
+  $padding-large: $content-container-spacing-side-large,
+  $only: $container-default-pos) {
+
+  @each $side in $only {
+    padding-#{$side}: $padding;
+    @include respond-to(small) {
+      padding-#{$side}: $padding-small;
+    }
+
+    @include respond-to(medium) {
+      padding-#{$side}: $padding-medium;
+    }
+
+    @include respond-to(large) {
+      padding-#{$side}: $padding-large;
+    }
+  }
+}
+
+@mixin container-margin(
+  $margin: $content-container-spacing-side,
+  $margin-small: $content-container-spacing-side-small,
+  $margin-medium: $content-container-spacing-side-medium,
+  $margin-large: $content-container-spacing-side-large,
+  $only: $container-default-pos) {
+
+  @each $side in $only {
+    margin-#{$side}: $margin;
+    @include respond-to(small) {
+      margin-#{$side}: $margin-small;
+    }
+
+    @include respond-to(medium) {
+      margin-#{$side}: $margin-medium;
+    }
+
+    @include respond-to(large) {
+      margin-#{$side}: $margin-large;
+    }
+  }
+}

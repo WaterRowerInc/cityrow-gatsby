@@ -1,0 +1,107 @@
+@import "../../../../assets/stylesheets/variables_/palette";
+@import "../../../../assets/stylesheets/mixins/responsive";
+
+.reviews-carousel__ {
+  &header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    margin-bottom: 12px;
+    font-family: "Open Sans", sans-serif;
+    font-size: 18px;
+    font-weight: 600;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: 0.5px;
+    color: $white;
+
+    @include on-mobile {
+      flex-direction: column;
+    }
+  }
+
+  &content {
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    max-width: 600px;
+    margin: 0 auto;
+    outline: none;
+
+    @include on-mobile {
+      padding: 0 24px 0 24px;
+      margin-bottom: 10px;
+    }
+  }
+
+  &stars-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 24px;
+    width: 120px;
+
+    &--medium {
+      height: 32px;
+      width: 160px;
+    }
+    &--large {
+      height: 40px;
+      width: 200px;
+    }
+
+    @include on-mobile {
+      order: 1;
+    }
+  }
+
+  &user {
+    font-family: "Open Sans", sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    font-style: normal;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: 0.5px;
+    color: $white;
+    margin-top: 12px;
+  }
+
+  &message {
+    font-family: "Open Sans", sans-serif;
+    font-size: 16px;
+    font-weight: 300;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.5;
+    letter-spacing: 0.5px;
+    text-align: center;
+    color: $white;
+
+    @include on-mobile {
+      order: 2;
+      margin-bottom: 24px;
+    }
+  }
+
+  &footnote {
+    margin-top: 4px;
+    font-family: "Open Sans", sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 10px;
+    line-height: 14px;
+    text-align: center;
+    color: #b2b2b2;
+  }
+}

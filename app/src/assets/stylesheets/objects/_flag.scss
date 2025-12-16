@@ -1,0 +1,69 @@
+// Heavily inspired by: http://csswizardry.com/2013/05/the-flag-object/
+
+// Flag object top:
+//
+// +---------+ ~~~~~~~~~~ ~~~~~
+// |         | ~~~~~ ~~~~~ ~~~~
+// |         | ~~~~~~~~~ ~~~~~~
+// |         |
+// +---------+
+
+// Flag object middle:
+//
+// +---------+
+// |         | ~~~~ ~~~~~~~~~~~
+// |         | ~~~~~~~ ~~~~~ ~~
+// |         | ~~~~~~~~~~~~
+// +---------+
+
+// Default is middle
+
+// usage example:
+//
+// <div class="o-flag o-flag-bottom">
+//   <div class="o-flag__image-container">
+//     <img class="o-flag__image" src="" alt="">
+//   </div>
+//   <div class="o-flag__body">
+//     <p></p>
+//   </div>
+// </div>
+
+// reverse using modifier o-flag--rev
+
+.o-flag {
+  display: table;
+  width: 100%;
+}
+
+.o-flag__image-container,
+.o-flag__body {
+  display: table-cell;
+  vertical-align: middle;
+
+  .o-flag--top & {
+    vertical-align: top;
+  }
+
+  .o-flag--bottom & {
+    vertical-align: bottom;
+  }
+}
+
+.o-flag__image-container {
+  padding-right: 1rem;
+
+  .o-flag--rev & {
+    padding-right: 0;
+    padding-left: 1rem;
+  }
+}
+
+.o-flag__image {
+  display: block;
+  max-width: none;
+}
+
+.o-flag__body {
+  width: 100%;
+}

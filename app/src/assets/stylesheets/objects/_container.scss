@@ -1,0 +1,22 @@
+.o-container {
+  @include block-horizontal-center;
+  padding-right: $content-container-spacing-side;
+  padding-left: $content-container-spacing-side;
+
+  @include respond-to(small) {
+    max-width: $content-container-small-max-width;
+  }
+
+  @include respond-to(medium) {
+    max-width: $content-container-medium-max-width;
+  }
+
+  @include respond-to(large) {
+    max-width: $content-container-large-max-width;
+  }
+
+  &--full {
+    max-width: 100%;
+    position: relative;
+  }
+}

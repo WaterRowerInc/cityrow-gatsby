@@ -1,0 +1,48 @@
+@mixin aspect-ratio-padding($width: 16, $height: 9) {
+  &:before {
+    padding-top: ($height / $width) * 100%;
+  }
+}
+
+@mixin aspect-ratio($width: 16, $height: 9) {
+  @include aspect-ratio-padding($width, $height);
+  position: relative;
+
+  &:before {
+    display: block;
+    content: '';
+    width: 100%;
+  }
+
+  > * {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+  }
+}
+
+@mixin full-background($background-position: center) {
+  background-position: $background-position;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+@mixin fullwidth-position {
+  left: 0;
+  right: 0;
+}
+
+@mixin fullheight-position {
+  bottom: 0;
+  top: 0;
+}
+
+// To be used with position: absolute/fixed
+@mixin fullsize-position($position: absolute) {
+  @include fullwidth-position;
+  @include fullheight-position;
+
+  position: $position;
+}

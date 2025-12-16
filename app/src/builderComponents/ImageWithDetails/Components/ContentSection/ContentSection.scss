@@ -1,0 +1,101 @@
+@import "../../../../assets/stylesheets/variables_/palette";
+@import "../../../../assets/stylesheets/mixins/responsive";
+
+.pp-container__price-section_text {
+  @include on-mobile {
+    max-width: 50vw;
+    word-break: break-word;
+    white-space: break-spaces;
+  }
+}
+
+.img-with-details__ {
+  &content__ {
+    &container {
+      max-width: 315px;
+      @include respond-to(medium) {
+        padding: 30px 15px 0 15px;
+        max-width: 405px;
+      }
+      @include on-medium-device {
+        padding-top: 20px;
+      }
+      @include on-mobile {
+        max-width: unset;
+        width: calc(100vw - 60px);
+        padding-top: 40px;
+      }
+    }
+    &introText {
+      font-family: "GothamBook", sans-serif;
+      font-size: 14px;
+      line-height: 17px;
+      margin-bottom: 16px;
+      text-transform: uppercase;
+    }
+    &title {
+      margin-bottom: 24px;
+      font-family: "GothamMedium", serif;
+      font-weight: 500;
+      font-size: 30px;
+      line-height: 36px;
+      color: $black;
+      text-align: left;
+
+      @include on-medium-device {
+        font-size: 22px;
+        line-height: 26px;
+      }
+      @include on-mobile {
+        max-width: unset;
+        width: 100%;
+      }
+    }
+    &description {
+      margin-bottom: 24px;
+      font-family: "Open Sans", serif;
+      font-size: 14px;
+      line-height: 19px;
+      color: $black;
+
+      @include respond-to(medium) {
+        font-size: 16px;
+        line-height: 24px;
+        max-width: initial;
+      }
+    }
+  }
+
+  &price__ {
+    &container {
+      display: flex;
+      flex-direction: row;
+      font-family: "Open Sans", serif;
+      font-size: 14px;
+      line-height: 20px;
+      color: $stale-grey;
+      margin-bottom: 32px;
+    }
+
+    &text {
+      margin-left: 8px;
+      color: $black;
+      font-family: "GothamMedium", serif;
+      font-size: 18px;
+      line-height: 22px;
+    }
+
+    &text-sale {
+      margin-left: 8px;
+      color: $slate-grey;
+      font-family: "GothamLight", serif;
+      font-size: 18px;
+      line-height: 22px;
+      text-decoration: line-through;
+    }
+  }
+
+  &klarna {
+    margin-bottom: 24px;
+  }
+}

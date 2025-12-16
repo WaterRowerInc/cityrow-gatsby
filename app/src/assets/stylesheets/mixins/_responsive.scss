@@ -1,0 +1,162 @@
+$breakpoints: (
+  'small'  : 700px,
+  'medium' : 1024px,
+  'large'  : 1340px,
+  'max-container' : 1340px
+);
+
+$breakpoints-col: (
+  'sm'  : 'small' ,
+  'md'  : 'medium',
+  'lg'  : 'large'
+);
+
+$breakpoints-list: (
+  'xs'  : '(max-width: 699px)',
+  'sm'  : '(min-width: 700px) and (max-width: 1023px)',
+  'md'  : '(min-width: 1024px) and (max-width: 1339px)',
+  'lg'  : '(min-width: 1340px)',
+);
+
+@mixin respond-to($breakpoint) {
+  // from http://www.sitepoint.com/managing-responsive-breakpoints-sass/
+  $value: map-get($breakpoints, $breakpoint);
+  @if $value != null {
+    @media print, (min-width: $value) {
+      @content;
+    }
+  } @else {
+    @warn "Unfortunately, no value could be retrieved from `#{$breakpoint}`. "
+        + 'Please make sure it is defined in `$breakpoints` map.';
+  }
+}
+
+@mixin respond-up-to($breakpoint) {
+  $value: map-get($breakpoints, $breakpoint);
+
+  @if $value != null {
+    @media print, (max-width: $value - 1) {
+      @content;
+    }
+  } @else {
+    @warn "Unfortunately, no value could be retrieved from `#{$breakpoint}`. "
+        + 'Please make sure it is defined in `$breakpoints` map.';
+  }
+}
+
+@mixin respond-between($breakpoint-lower, $breakpoint-upper) {
+  $value-lower: map-get($breakpoints, $breakpoint-lower);
+  $success: true;
+
+  @if $value-lower == null {
+    $success: false;
+
+    @warn "Unfortunately, no value could be retrieved from `#{$breakpoint-lower}`. "
+        + 'Please make sure it is defined in `$breakpoints` map.';
+  }
+
+  $value-upper: map-get($breakpoints, $breakpoint-upper);
+  @if $value-upper == null {
+    $success: false;
+
+    @warn "Unfortunately, no value could be retrieved from `#{$breakpoint-upper}`. "
+        + 'Please make sure it is defined in `$breakpoints` map.';
+  }
+
+  @if $success {
+    @media print, (min-width: $value-lower) and (max-width: $value-upper - 1) {
+      @content;
+    }
+  }
+}
+
+@mixin respond-between-values($value-lower, $value-upper) {
+  @media print, (min-width: $value-lower) and (max-width: $value-upper - 1) {
+    @content;
+  }
+}
+
+@mixin on-mobile {
+  @include respond-up-to(small) {
+    @content;
+  }
+}
+
+@mixin on-medium-device {
+  @include respond-up-to(medium) {
+    @content;
+  }
+}
+
+@mixin responsive-style-classes(
+  $breakpoint-keys: map-keys($breakpoints),
+  $include-default: true
+) {
+  @if ($include-default) {
+    @content;
+  }
+
+  @each $key in $breakpoint-keys {
+    @if map-has-key($breakpoints, $key) {
+      &--#{$key} {
+        @include respond-up-to(#{$key}) {
+          @content;
+        }
+      }
+
+      &--#{$key}-up {
+        @include respond-to(#{$key}) {
+          @content;
+        }
+      }
+    } @else {
+      @warn "Unfortunately, no breakpoint key could be found for `#{$key}`. "
+        + 'Please make sure it is defined in `$breakpoints` map.';
+    }
+  }
+}
+
+@mixin responsive-grid($columns-base: 12, $breakpoints-grid: $breakpoints-col) {
+  @each $key, $value in $breakpoints-grid {
+    @if map-has-key($breakpoints, $value) {
+      @include respond-to(#{$value}) {
+        @for $i from 1 through 12 {
+          &-#{$i}--#{$key} {
+            padding-right: $content-container-spacing-side;
+            padding-left: $content-container-spacing-side;
+            float: left;
+            @include block-grid-display(percentage($i / $columns-base));
+          }
+        }
+      }
+    } @else {
+      @warn "Unfortunately, no breakpoint key could be found for `#{$value}`.  ---`#{$key}`-----"
+        + 'Please make sure it is defined in `$breakpoints-grid` map.';
+    }
+  }
+}
+
+@mixin responsive-grid-list(
+  $columns-base: 10,
+  $breakpoints-grid: $breakpoints-list
+) {
+  @for $i from 2 through $columns-base {
+    &-#{$i} {
+      @include block-grid(0px, $i, "&");
+      padding-right: $content-container-spacing-side;
+      padding-left: $content-container-spacing-side;
+    }
+  }
+
+  @each $key, $value in $breakpoints-grid {
+    @media print, #{$value} {
+      @for $i from 2 through $columns-base {
+        &-#{$i}--#{$key} {
+          @include block-grid(0px, $i, "&");
+          padding-right: $content-container-spacing-side;
+          padding-left: $content-container-spacing-side;
+        }
+      }
+    }
+  }
+}

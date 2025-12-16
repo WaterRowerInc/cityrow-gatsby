@@ -1,0 +1,163 @@
+@import "../../../assets/stylesheets/variables_/palette";
+@import "../../../assets/stylesheets/mixins/responsive";
+
+.menu__ {
+  &desktop {
+    display: flex;
+    flex-direction: row;
+
+    @include on-medium-device {
+      display: none;
+    }
+  }
+
+  &hidden {
+    display: none;
+    transition: ease-in-out 3s;
+  }
+
+  &mobile {
+    transition: ease-in-out 3s;
+    background-color: $dark_blue;
+    width: 75%;
+    height: 100%;
+    position: fixed;
+    right: 0;
+    top: 0;
+    padding: 29px;
+    display: none;
+    flex-direction: column;
+    align-items: flex-end;
+    z-index: 2;
+
+    @include on-medium-device {
+      display: flex;
+      max-width: 576px !important;
+    }
+
+    @include on-mobile {
+      display: flex;
+      padding: 29px 26px;
+    }
+
+    &--with-ribbon {
+      top: 45px;
+
+      @include on-mobile {
+        top: 67px;
+      }
+    }
+
+    &--caret {
+      width: 18px !important;
+      height: 9px !important;
+      position: absolute;
+      right: 0;
+      top: 13px;
+    }
+
+    &--entry {
+      padding: 8px 0;
+      border-bottom: 1px solid $white;
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      margin-bottom: 16px;
+      position: relative;
+      cursor: pointer;
+
+      &:hover {
+        opacity: 0.8;
+      }
+
+      &--subs {
+        max-height: 0;
+        overflow: hidden;
+        transition: ease-in-out 0.2s;
+
+        &-visible {
+          max-height: 100%;
+        }
+      }
+
+      &--normal {
+        font-size: 18px;
+        line-height: 20px;
+        font-family: "OpenSansCondensed", sans-serif;
+        font-weight: 700;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+        color: $white;
+        text-decoration: none !important;
+
+        &:hover,
+        &:active {
+          color: $white !important;
+        }
+      }
+
+      &--alt {
+        display: flex;
+        font-size: 14px;
+        line-height: 17px;
+        font-family: "GothamBook", sans-serif;
+        font-weight: normal;
+        letter-spacing: 1px;
+        text-transform: capitalize;
+        color: $white;
+        margin: 24px 0 0 12px;
+        text-decoration: none !important;
+
+        &:last-child {
+          margin-bottom: 24px;
+        }
+      }
+    }
+
+    &--close {
+      width: 25px;
+      height: 25px;
+      object-fit: contain;
+      margin-bottom: 26px;
+    }
+  }
+
+  &mobile-icons-container {
+    display: none;
+
+    @include on-medium-device {
+      display: flex;
+      align-items: center;
+    }
+  }
+
+  &option-active {
+    font-family: "GothamBook", serif !important;
+    font-weight: bold !important;
+    border-bottom: 4px solid $white !important;
+  }
+
+  &text {
+    font-family: "GothamBook", serif;
+    font-weight: 350;
+    color: $white;
+    text-transform: uppercase;
+    font-size: 14px;
+    margin-left: 40px;
+    display: flex;
+    align-items: center;
+    padding-top: 8px;
+    padding-bottom: 4px;
+    border-bottom: 4px solid $black;
+
+    &:active {
+      color: transparent;
+    }
+
+    &:hover {
+      color: $white;
+      text-decoration: none;
+      opacity: 0.5;
+    }
+  }
+}

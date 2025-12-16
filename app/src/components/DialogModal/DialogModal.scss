@@ -1,0 +1,76 @@
+@import "../../assets/stylesheets/variables_/palette";
+@import "../../assets/stylesheets/mixins/responsive";
+
+.dialog-modal__ {
+
+  &container__ {
+
+    background-color: $white;
+    width: 550px;
+    padding: 40px 75px;
+    box-shadow: 0 2px 8px $shadow-25;
+    border-radius: 4px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    @include on-mobile {
+      max-width: 327px;
+      padding: 40px 25px;
+    }
+
+    &title {
+      font-family: 'GothamBook', sans-serif;
+      font-size: 30px;
+      line-height: 35px;
+      display: flex;
+      align-items: center;
+      text-align: center;
+      text-transform: capitalize;
+      margin-bottom: 24px;
+    }
+
+    &title-border {
+      height: 4px;
+      width: 400px;
+      background-color: $ice-blue;
+      margin: 0 auto;
+      color: $invisible;
+
+      @include on-mobile {
+        width: calc(100% - 64px);
+      }
+    }
+
+    &subtitle {
+      margin-top: 32px;
+      font-family: 'Open Sans', sans-serif;
+      font-style: normal;
+      font-weight: 600;
+      font-size: 18px;
+      line-height: 25px;
+      text-align: center;
+      color: $blue-grey;
+    }
+
+    &buttons-wrapper {
+      display: flex;
+      justify-content: center;
+      margin-top: 24px;
+
+      @include on-mobile {
+        flex-direction: column;
+      }
+
+      button {
+        margin-left: 12px;
+        margin-right: 12px;
+        min-width: 170px;
+
+        @include on-mobile {
+          margin: 17px 0 0;
+        }
+      }
+    }
+  }
+}
