@@ -54,15 +54,13 @@ class Header extends React.Component<HeaderProps, State> implements HeaderView {
           query {
             allBuilderModels {
               navigationOptions(limit: 1, target: { urlPath: "/menu" }, options: { cachebust: true }) {
-                data {
-                  options
-                }
+                content
               }
             }
           }
         `}
         render={(data) => {
-          const options = data.allBuilderModels.navigationOptions[0].data.options;
+          const options = data.allBuilderModels.navigationOptions[0].content.data.options;
           const currentPageNav: BuilderPageNav = options.find((menu) =>
             menu.path.parent.options?.find((submenu) => path === `/${localizationCode}${submenu.path}`)
           )?.path.parent;

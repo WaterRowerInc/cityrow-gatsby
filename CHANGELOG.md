@@ -7,7 +7,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [2.5] - 2024-07-10
 - Remove Klarna
-- Remove Klarna placements
+- Remove Klarna placements from PDP
 
 ## [2.4] - 2023-08-03
 - Add wood type + monitor selector

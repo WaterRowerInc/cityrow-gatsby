@@ -1,6 +1,6 @@
 import { FormEvent } from "react";
-import { DynamicFormRequest } from "./../../core/domain/analytics/DynamicFormRequest";
-import { TrackAnalytics } from "./../../core/useCases/TrackAnalytics/TrackAnalytics/TrackAnalytics";
+import { DynamicFormRequest } from "../../core/domain/analytics/DynamicFormRequest";
+import { TrackAnalytics } from "../../core/useCases/TrackAnalytics/TrackAnalytics/TrackAnalytics";
 export interface DynamicFormView {
   handleSubmit(e: FormEvent);
   clearForm();

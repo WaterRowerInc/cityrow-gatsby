@@ -10,7 +10,7 @@ import { GetUser } from "../../core/useCases/GetUser/GetUser";
 import { TrackAnalyticsPageView } from "../../core/useCases/TrackAnalytics/PageView/TrackAnalyticsPageView";
 import { UpdateUser } from "../../core/useCases/UpdateUser/UpdateUser";
 import { padNumberMonth } from "../../utils/dateUtils";
-import { UserNotLoggedInError } from "./../../core/domain/user/UserNotLoggedInError";
+import { UserNotLoggedInError } from "../../core/domain/user/UserNotLoggedInError";
 
 export interface ProfileView {
   showLoader();

@@ -1,4 +1,4 @@
-import { PaymentInfo } from "./../../core/domain/subscriptions/PaymentInfo";
+import { PaymentInfo } from "../../core/domain/subscriptions/PaymentInfo";
 export interface SubscriptionInfoVM {
   id: string;
   name: string;

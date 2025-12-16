@@ -1,5 +1,5 @@
-import { NotExpectedError } from "./../../domain/orders/NotExpectedError";
-import { EmailNotFoundError } from "./../../domain/auth/EmailNotFoundError";
+import { NotExpectedError } from "../../domain/orders/NotExpectedError";
+import { EmailNotFoundError } from "../../domain/auth/EmailNotFoundError";
 import { AuthService } from "../../domain/auth/AuthService";
 
 export class ResetPassword {

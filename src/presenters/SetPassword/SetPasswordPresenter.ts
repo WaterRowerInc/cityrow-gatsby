@@ -1,4 +1,4 @@
-import { SetPassword } from './../../core/useCases/SetPassword/SetPassword';
+import { SetPassword } from '../../core/useCases/SetPassword/SetPassword';
 
 export interface SetPasswordView {
   showLoader();

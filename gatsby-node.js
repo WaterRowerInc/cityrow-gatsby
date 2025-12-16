@@ -102,15 +102,18 @@ exports.createPages = async ({ graphql, actions }) => {
   });
 
   pagesResults.data.allBuilderModels.landingPage.forEach((page) => {
-    var pageZone = "us";
-    zonesResults.data.allBuilderModels.zoneModel
-      .find((zoneModel) => zoneModel.name.toLowerCase() === pageZone.toLowerCase())
-      .data.zone.countries.forEach((country) => {
-        createPage({
-          path: `/en-${country.countryCode.toLowerCase()}${page.data.url}`,
-          component: path.resolve("./src/pages/CommonPage.tsx"),
-          context: { urlTarget: page.data.url, zone: pageZone.toLowerCase(), ...country },
-        });
+    page.query
+      .find((query) => query.property === "zone")
+      .value.forEach((pageZone) => {
+        zonesResults.data.allBuilderModels.zoneModel
+          .find((zoneModel) => zoneModel.name.toLowerCase() === pageZone.toLowerCase())
+          .data.zone.countries.forEach((country) => {
+            createPage({
+              path: `/en-${country.countryCode.toLowerCase()}${page.data.url}`,
+              component: path.resolve("./src/pages/CommonPage.tsx"),
+              context: { urlTarget: page.data.url, zone: pageZone.toLowerCase(), ...country },
+            });
+          });
       });
   });
 };

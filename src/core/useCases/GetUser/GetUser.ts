@@ -3,7 +3,7 @@ import { SessionStorage } from "../../domain/auth/SessionStorage";
 import { User } from "../../domain/user/User";
 import { UserNotLoggedInError } from "../../domain/user/UserNotLoggedInError";
 import { UserCallback, UserStorage, UserSubscription } from "../../domain/user/UserStorage";
-import { NotExpectedError } from "./../../domain/orders/NotExpectedError";
+import { NotExpectedError } from "../../domain/orders/NotExpectedError";
 
 export class GetUser {
   private readonly userStorage: UserStorage;
