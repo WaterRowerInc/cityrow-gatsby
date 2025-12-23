@@ -5,10 +5,11 @@
         ports:
           - "8000:8000"
         volumes:
-          - ./:/
-          - gatsby_node_mods:/node_modules
+          - ./:/app
+          - gatsby_node_mods:/app/node_modules
         env_file:
           - .env
-       
+        environment:
+          - NODE_OPTIONS="--max-old-space-size=4096" # Allocate 4GB of RAM
     volumes:
       gatsby_node_mods:
