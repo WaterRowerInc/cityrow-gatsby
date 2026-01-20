@@ -1,5 +1,5 @@
 import { NotExpectedError } from "../../domain/orders/NotExpectedError";
-import { SubscriptionService } from "../../domain/subscriptions/SubscriptionService";
+import { SubscriptionService } from "./../../domain/subscriptions/SubscriptionService";
 
 export class IsAppTrialUser {
   private readonly subscriptionService: SubscriptionService;

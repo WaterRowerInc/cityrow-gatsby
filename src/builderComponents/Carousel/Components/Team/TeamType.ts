@@ -1,4 +1,4 @@
-import { BuilderImageModel } from '../../../../components/BuilderImage/BuilderImage.type';
+import { BuilderImageModel } from './../../../../components/BuilderImage/BuilderImage.type';
 export interface TeamType {
   name: string;
   imageModel: BuilderImageModel;
