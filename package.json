@@ -34,6 +34,7 @@
     "@stripe/stripe-js": "^1.22.0",
     "@types/classnames": "^2.2.11",
     "@types/react-slick": "^0.23.4",
+    "abortcontroller-polyfill": "^1.7.8",
     "axios": "^0.24.0",
     "classnames": "^2.2.6",
     "dotenv": "^8.2.0",
@@ -42,10 +43,12 @@
     "gatsby-plugin-meta-redirect": "^1.1.1",
     "gatsby-plugin-rollbar": "^1.1.0",
     "gatsby-plugin-sass": "^5.24.0",
+    "gatsby-plugin-sharp": "^4.25.1",
     "gatsby-plugin-typescript": "^4.24.0",
     "js-sha1": "^0.6.0",
     "less": "^4.1.1",
     "lodash": "^4.17.21",
+    "promise-polyfill": "^8.3.0",
     "react": "^17.0.1",
     "react-content-loader": "^6.0.3",
     "react-dom": "^17.0.1",
@@ -59,10 +62,7 @@
     "swell-js": "^3.17.1",
     "ts-custom-error": "^3.2.0",
     "ts-node": "^9.0.0",
-    "uuid": "^9.0.0",
-    "gatsby-plugin-sharp": "^4.25.1",
-    "promise-polyfill": "^8.3.0",
-    "abortcontroller-polyfill": "^1.7.8"
+    "uuid": "^9.0.0"
   },
   "devDependencies": {
     "@types/jest": "^27.0.2",
@@ -76,6 +76,7 @@
     "jest-it-up": "^2.0.0",
     "lint-staged": "^12.3.4",
     "prettier": "^2.3.1",
+    "sass": "^1.97.2",
     "ts-jest": "^27.0.7",
     "ts-mockito": "^2.6.1",
     "typescript": "^4.4.4"
